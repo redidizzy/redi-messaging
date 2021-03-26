@@ -1,4 +1,7 @@
 class SessionsController < ApplicationController
+    
+    before_action :require_guest, except: [:destroy]
+    
     def new
     end
     
@@ -18,5 +21,14 @@ class SessionsController < ApplicationController
         session[:user_id] = nil
         flash[:success] = "you have successfully logged out"
         redirect_to login_path
+    end
+
+    private 
+
+    def require_guest 
+        if logged_in?
+            flash[:error] = "You are already logged in"
+            redirect_to root_path 
+        end
     end
 end
