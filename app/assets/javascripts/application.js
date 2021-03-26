@@ -22,6 +22,12 @@ scroll_bottom = () => {
         $("#messages").scrollTop($("#messages")[0].scrollHeight)
     }
 }
+submit_message = () => {
+    $(document).on("ajax:complete", "#new_message", (e) => {
+        var form = $(e.currentTarget)
+        form.find("input").val("")
+    })
+}
 
 $(document).on("turbolinks:load", ()=>{
     $('.ui.dropdown').dropdown()
@@ -29,4 +35,5 @@ $(document).on("turbolinks:load", ()=>{
         $(this).closest('.message').transition('fade')    
     })
     scroll_bottom()
+    submit_message()
 })
