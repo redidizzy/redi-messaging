@@ -1,5 +1,19 @@
 @import "semantic-ui";
 
+$violet: #6435C9;
+
 .chatbox{
     height: 450px;
+}
+.button{
+    &.transparent{
+        opacity: .6;
+        transition: opacity .5s;
+        &:hover{
+            opacity: 1;
+        }
+    }
+}
+.chat-username{
+    color: $violet;
 }
