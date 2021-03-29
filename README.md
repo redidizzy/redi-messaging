@@ -1,24 +1,11 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+This is a simple live messaging app i've made using Ruby on Rails by following this course :  https://www.udemy.com/course/the-complete-ruby-on-rails-developer-course 
 
-Things you may want to cover:
+## Live app
 
-* Ruby version
+You can visit the live version of the app [here](https://redi-messaging.herokuapp.com)
 
-* System dependencies
+## Installation 
 
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+Install the app on your local machine like any other RoR app, don't forget to run the migrations and seeders
