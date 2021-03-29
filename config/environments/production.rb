@@ -43,8 +43,8 @@ Rails.application.configure do
 
   # Mount Action Cable outside main process or domain
   # config.action_cable.mount_path = nil
-  # config.action_cable.url = 'wss://example.com/cable'
-  # config.action_cable.allowed_request_origins = [ 'http://example.com', /http:\/\/example.*/ ]
+  config.action_cable.url = 'https://redi-messaging.herokuapp.com/cable'
+  config.action_cable.allowed_request_origins = [ 'http://redis-18626.c258.us-east-1-4.ec2.cloud.redislabs.com:18626', /http:\/\/redis-18626.c258.us-east-1-4.ec2.cloud.redislabs.com.*:18626/ ]
 
   # Force all access to the app over SSL, use Strict-Transport-Security, and use secure cookies.
   # config.force_ssl = true
