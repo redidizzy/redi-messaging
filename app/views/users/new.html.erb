@@ -6,6 +6,9 @@
 
 <div class="ui placeholder segment">
   <div class="ui two column very relaxed stackable grid">
+    <div class="middle aligned column">    
+        <%= link_to "<i class='power icon'></i>Login".html_safe, login_path, class: "ui big button violet transparent" %>
+    </div>
     <div class="column">
       <%= form_for @user, html: { class: "ui form", role: "form"}, url: signup_path do |f| %>
         <div class="field <%= @user.errors.include?(:username) ? "error" : "" %>">
@@ -35,9 +38,6 @@
         </div>
         <%= f.button "Signup", class: "ui violet submit button" %>
       <% end %>
-    </div>
-    <div class="middle aligned column">    
-        <%= link_to "<i class='power icon'></i>Login".html_safe, login_path, class: "ui big button violet transparent" %>
     </div>
   </div>
   <div class="ui vertical divider">
