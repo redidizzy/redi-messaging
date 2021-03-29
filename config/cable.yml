@@ -6,6 +6,6 @@ test:
 
 production:
   adapter: redis
-  url: http://redis-18626.c258.us-east-1-4.ec2.cloud.redislabs.com:18626
+  url: redis://redis-18626.c258.us-east-1-4.ec2.cloud.redislabs.com:18626
   channel_prefix: redi-messaging_production
   password: <%= ENV['REDIS_PASSWORD'] %>
