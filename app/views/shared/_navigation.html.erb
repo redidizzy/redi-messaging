@@ -7,21 +7,25 @@
             Messages
         </a>
         <div class="right menu">
+            <% unless logged_in? %>
             <div class="ui dropdown item">
             Account <i class="dropdown icon"></i>
-            <div class="menu">
-                <% if logged_in? %>
-                    <%= link_to  "Logout", logout_path, method: :delete, class: "item" %>
-                <% else %>
+                <div class="menu">
                     <%= link_to "Login", login_path, class: "item" %>
                     <%= link_to "Signup", signup_path, class: "item" %>
-                <% end %>
+                </div>
             </div>
-            </div>
+            <% end %>
             <% unless logged_in? %>
                 <div class="item">
                     <%= link_to "Login", login_path, class: "ui primary button" %>
                 </div>
+            <% else %>
+                <div class="item">
+                    <%= link_to  "Logout", logout_path, method: :delete, class: "ui primary button" %>
+                </div>  
+                
+
             <% end %>
         </div>
     </div>
