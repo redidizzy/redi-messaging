@@ -16,4 +16,11 @@ class ApplicationController < ActionController::Base
             redirect_to login_path
         end
     end
+
+    def require_guest 
+        if logged_in?
+            flash[:error] = "You are already logged in"
+            redirect_to root_path 
+        end
+    end
 end

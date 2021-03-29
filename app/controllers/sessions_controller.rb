@@ -22,13 +22,4 @@ class SessionsController < ApplicationController
         flash[:success] = "you have successfully logged out"
         redirect_to login_path
     end
-
-    private 
-
-    def require_guest 
-        if logged_in?
-            flash[:error] = "You are already logged in"
-            redirect_to root_path 
-        end
-    end
 end

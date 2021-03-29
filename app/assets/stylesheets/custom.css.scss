@@ -21,3 +21,8 @@ $violet: #6435C9;
 .chat-username{
     color: $violet;
 }
+div.field_with_errors { display: inline-block; }
+
+.input-error-message{
+    color: #9F3A38;
+}
